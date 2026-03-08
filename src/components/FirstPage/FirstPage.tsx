@@ -6,7 +6,7 @@ export const FirstPage = () => {
       <body className="bg-[#E4C3A4]">
         <header>
           <nav className="flex items-center w-[1300px] h-[157px] gap-[80px] justify-center relative right-[80px]">
-            <img src="public\img\Frame.png" alt="logo" />
+            <img src="/img/Frame.png" alt="logo" />
             <ul className="flex flex-wrap gap-[80px]">
               <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
                 <Link to={"/"} className="visited:text-[#5a5858]">
