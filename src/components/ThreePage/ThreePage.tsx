@@ -6,7 +6,7 @@ export const ThreePage = () => {
       <body className="bg-[#E4C3A4]">
         <header>
           <nav className="flex items-center w-[1300px] h-[157px] gap-[80px] justify-center relative right-[80px]">
-            <img src="public\img\Frame.png" alt="logo" />
+            <img src="/img/Frame.png" alt="logo" />
             <ul className="flex flex-wrap gap-[80px]">
               <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
                 <Link to={"/"}>Home</Link>
@@ -33,7 +33,7 @@ export const ThreePage = () => {
             <div className="w-[436px] h-[650px] border-solid bg-[#EECA50] border-none rounded-md items-center text-left">
               <img
                 src="
-                public\img\Frame256.png"
+                /img/Frame256.png"
                 alt="img"
                 className="m-auto mt-[20px]"
               />
@@ -55,7 +55,7 @@ export const ThreePage = () => {
             <div className="w-[436px] h-[650px] border-solid bg-[#EECA50] border-none rounded-md items-center text-left">
               <img
                 src="
-                public\img\image6.png"
+                /img/image6.png"
                 alt="img"
                 className="m-auto mt-[20px]"
               />

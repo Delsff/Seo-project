@@ -3,13 +3,9 @@ export const Faq = () => {
     <body className="bg-[#E4C3A4]">
       <header>
         <div className="flex flex-wrap m-auto max-w-[700px] justify-between">
+          <img src="/img/Frame.png" alt="img" className="w-[300px] h-[150px]" />
           <img
-            src="public\img\Frame.png"
-            alt="img"
-            className="w-[300px] h-[150px]"
-          />
-          <img
-            src="public\img\FAQ.png"
+            src="/img/FAQ.png"
             alt="img"
             className="w-[150px] h-[73px] mt-[40px]"
           />
@@ -52,12 +48,12 @@ export const Faq = () => {
               <p className="font-[Rubik] font-[800] font-extrabold text-[26px] text-[#454545] flex flex-wrap gap-[20px]">
                 <span className="text-[#E79F4A]">3.</span>acess to the account
                 or just couple of datas?
-                <img src="public\img\ArrowDown2.png" alt="img" />
+                <img src="/img/ArrowDown2.png" alt="img" />
               </p>
             </div>
           </div>
           <div>
-            <img src="public\img\image5.png" alt="img" />
+            <img src="/img/image5.png" alt="img" />
           </div>
         </div>
       </main>

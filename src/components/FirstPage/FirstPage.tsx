@@ -62,7 +62,7 @@ export const FirstPage = () => {
             </div>
             <div>
               <img
-                src="public\img\image.png"
+                src="/img/image.png"
                 alt="img"
                 className="relative bottom-[50px]"
               />

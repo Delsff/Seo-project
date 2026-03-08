@@ -6,7 +6,7 @@ export const SecondPage = () => {
       <body className="bg-[#E4C3A4]">
         <header>
           <nav className="flex items-center w-[1300px] h-[157px] gap-[80px] justify-center relative right-[80px]">
-            <img src="public\img\Frame.png" alt="logo" />
+            <img src="/img/Frame.png" alt="logo" />
             <ul className="flex flex-wrap gap-[80px]">
               <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
                 <Link to={"/"}>Home</Link>
@@ -15,12 +15,12 @@ export const SecondPage = () => {
                 <Link to={"/ThreePage"}>News</Link>
               </li>
               <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
-                <Link to={"/SecondPage"} className="visited:text-[#5a5858]"  >
+                <Link to={"/SecondPage"} className="visited:text-[#5a5858]">
                   clan wars analyse
                 </Link>
               </li>
               <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
-                 <Link to={"/FourPage"}>frindes activity </Link>
+                <Link to={"/FourPage"}>frindes activity </Link>
               </li>
             </ul>
             <button className="w-[127px] h-[60px] rounded-xl bg-[#E79F4A] font-[Inter] font-[500] text-[Medium] text-[20px] cursor-pointer hover:bg-[#bd803a]">
