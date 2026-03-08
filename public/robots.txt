@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://starlit-pony-aefffb.netlify.app/sitemap.xml
