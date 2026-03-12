@@ -5,7 +5,7 @@ import { SecondPage } from "./components/SecondPage/SecondPage";
 import { ThreePage } from "./components/ThreePage/ThreePage";
 import { FourPage } from "./components/FourPage/FourPage";
 import { FaqPage } from "./pages/Faq";
-
+import { NotFoundPage } from "./components/NotFound/NotFoundPage";
 function App() {
   return (
     <>
@@ -16,6 +16,7 @@ function App() {
           <Route path="/ThreePage" element={<ThreePage />} />
           <Route path="/FourPage" element={<FourPage />} />
           <Route path="/Faq" element={<FaqPage />} />
+          <Route path="*" element={<NotFoundPage />}></Route>
         </Routes>
       </BrowserRouter>
     </>
