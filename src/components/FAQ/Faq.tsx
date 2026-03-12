@@ -25,7 +25,7 @@ export const Faq = () => {
             >
               <p className="font-[Rubik] font-[800] font-extrabold text-[26px] text-[#454545] flex flex-wrap gap-[20px]">
                 <span className="text-[#E79F4A]">1.</span> is it safe to sign up
-                our account? <img src="public\img\ArrowDown2.png" alt="img" />
+                our account? <img src="/img/ArrowDown2.png" alt="img" />
               </p>
             </div>
             <div
@@ -36,7 +36,7 @@ export const Faq = () => {
             >
               <p className="font-[Rubik] font-[800] font-extrabold text-[26px] text-[#454545] flex flex-wrap gap-[20px]">
                 <span className="text-[#E79F4A]">2.</span>the website manage our
-                account? <img src="public\img\ArrowDown2.png" alt="img" />
+                account? <img src="/img/ArrowDown2.png" alt="img" />
               </p>
             </div>
             <div
