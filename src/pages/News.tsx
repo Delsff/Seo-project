@@ -1,5 +1,5 @@
-import { ThreePage } from "../components/ThreePage/ThreePage";
+import { SecondPage } from "../components/SecondPage/SecondPage";
 
 export const NewsPage = () => {
-  return <ThreePage />;
+  return <SecondPage />;
 };

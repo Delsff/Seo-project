@@ -1,9 +1,9 @@
-import { SecondPage } from "../components/SecondPage/SecondPage";
+import { ThreePage } from "../components/ThreePage/ThreePage";
 
-export const Second = () => {
+export const Three = () => {
   return (
     <>
-      <SecondPage />
+      <ThreePage />
     </>
   );
 };

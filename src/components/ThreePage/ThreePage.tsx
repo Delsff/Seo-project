@@ -3,21 +3,46 @@ import { Link } from "react-router-dom";
 export const ThreePage = () => {
   return (
     <>
+      <style>{`
+        @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-30px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInLeft {
+          from { opacity: 0; transform: translateX(-50px); }
+          to   { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInRight {
+          from { opacity: 0; transform: translateX(50px); }
+          to   { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: scale(0.8); }
+          to   { opacity: 1; transform: scale(1); }
+        }
+        .anim-nav      { animation: fadeInDown  0.6s ease 0.0s both; }
+        .anim-left     { animation: fadeInLeft  0.7s ease 0.2s both; }
+        .anim-divider  { animation: fadeIn      0.5s ease 0.3s both; }
+        .anim-left-val { animation: fadeInLeft  0.7s ease 0.3s both; }
+        .anim-vs       { animation: fadeIn      0.8s ease 0.4s both; }
+        .anim-right    { animation: fadeInRight 0.7s ease 0.3s both; }
+      `}</style>
+
       <body className="bg-[#E4C3A4]">
         <header>
-          <nav className="flex items-center w-[1300px] h-[157px] gap-[80px] justify-center relative right-[80px]">
+          <nav className="anim-nav flex items-center w-[1300px] h-[157px] gap-[80px] justify-center relative right-[80px]">
             <img src="/img/Frame.png" alt="logo" />
             <ul className="flex flex-wrap gap-[80px]">
               <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
                 <Link to={"/"}>Home</Link>
               </li>
               <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer ">
-                <Link to={"/ThreePage"} className="visited:text-[#5a5858]">
-                  News
-                </Link>
+                <Link to={"/SecondPage"}>News</Link>
               </li>
               <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
-                <Link to={"/SecondPage"}>clan wars analyse</Link>
+                <Link to={"/ThreePage"} className="visited:text-[#5a5858]">
+                  clan wars analyse
+                </Link>
               </li>
               <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
                 <Link to={"/FourPage"}>frindes activity </Link>
@@ -28,54 +53,51 @@ export const ThreePage = () => {
             </button>
           </nav>
         </header>
-        <main>
-          <div className="flex flex-wrap mt-[100px] gap-[100px] justify-center">
-            <div className="w-[436px] h-[650px] border-solid bg-[#EECA50] border-none rounded-md items-center text-left">
-              <img
-                src="
-                /img/Frame256.png"
-                alt="img"
-                className="m-auto mt-[20px]"
-              />
-              <p className="font-[Inter] font-[800] text-[#454181] text-[28px] pl-[60px] mt-[10px]">
-                town hall 15 is here
-              </p>
-              <br />
-              <p className="text-[#6661A8] font-[Inter] font-[600] pl-[60px] text-[18px]">
-                you can download this update now <br />
-                from google play and enjoy all new <br /> feathers
-              </p>
-              <p className="text-[#BB2E25] font-[Inter] font-[700] pl-[60px] mt-[10px] text-[20px]">
-                author : Ali
-              </p>
-              <button className="w-[147px] h-[60px] rounded-xl bg-[#E79F4A] font-[Inter] font-[500] text-[Medium] text-[20px] cursor-pointer hover:bg-[#bd803a] ml-[45px] mt-[15px]">
-                Learn More
-              </button>
-            </div>
-            <div className="w-[436px] h-[650px] border-solid bg-[#EECA50] border-none rounded-md items-center text-left">
-              <img
-                src="
-                /img/image6.png"
-                alt="img"
-                className="m-auto mt-[20px]"
-              />
-              <p className="font-[Inter] font-[800] text-[#454181] text-[28px] pl-[60px] mt-[10px]">
-                What is clan capital?
-              </p>
-              <br />
-              <p className="text-[#6661A8] font-[Inter] font-[600] pl-[60px] text-[18px]">
-                if you have some problems on clan <br /> capital this article
-                can help you!
-              </p>
-              <p className="text-[#BB2E25] font-[Inter] font-[700] pl-[60px] mt-[20px] text-[20px]">
-                author : unknow user
-              </p>
-              <button className="w-[147px] h-[60px] rounded-xl bg-[#E79F4A] font-[Inter] font-[500] text-[Medium] text-[20px] cursor-pointer hover:bg-[#bd803a] ml-[45px] mt-[35px]">
-                Learn More
-              </button>
-            </div>
+        <div className="flex gap-30 flex justify-center mt-[50px]">
+          <div className="anim-left flex flex-col gap-2 text-[26px] font-medium">
+            <span>clans name</span>
+            <span>starts</span>
+            <span>successed</span>
+            <span>failed</span>
+            <span>all attacks</span>
+            <span>persent</span>
+            <span>best attack</span>
+            <span>worst attack</span>
           </div>
-        </main>
+          <div className="anim-divider flex flex-col items-center justify-between text-[26px] relative right-[50px]">
+            <span>|</span>
+            <span>|</span>
+            <span>|</span>
+            <span>|</span>
+            <span>|</span>
+            <span>|</span>
+            <span>|</span>
+            <span>|</span>
+          </div>
+          <div className="anim-left-val flex flex-col gap-2 text-[26px] font-medium relative right-[50px]">
+            <span>Team 7</span>
+            <span>15</span>
+            <span>5</span>
+            <span>0</span>
+            <span>5</span>
+            <span>100%</span>
+            <span>Hitman</span>
+            <span>-----</span>
+          </div>
+          <div className="anim-vs text-[85px] font-medium relative bottom-[30px]">
+            VS
+          </div>
+          <div className="anim-right flex flex-col gap-2 text-[26px] font-medium">
+            <span>best friends</span>
+            <span>3</span>
+            <span>3</span>
+            <span>6</span>
+            <span>9</span>
+            <span>32.5%</span>
+            <span>-----</span>
+            <span>-----</span>
+          </div>
+        </div>
       </body>
     </>
   );
