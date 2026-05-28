@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import { ModalWindow, OpenWindowButton } from "../WIndow/openWindow";
 export const FirstPage = () => {
   return (
     <>
@@ -42,10 +42,9 @@ export const FirstPage = () => {
                 <Link to={"/FourPage"}>frindes activity</Link>
               </li>
             </ul>
-            <button className="w-[127px] h-[60px] rounded-xl bg-[#E79F4A] font-[Inter] font-[500] text-[Medium] text-[20px] cursor-pointer hover:bg-[#bd803a]">
-              sign up
-            </button>
+            <OpenWindowButton />
           </nav>
+          <ModalWindow />
           <div className="flex flex-wrap gap-[150px] mt-[100px]">
             <div className="anim-text text-left flex flex-col gap-[30px]">
               <p className="text-[#D43D27] font-[Inter] font-[700] text-[Medium] text-[40px]">
@@ -93,7 +92,7 @@ export const FirstPage = () => {
               <img
                 src="/img/image.png"
                 alt="img"
-                className="relative bottom-[50px]"
+                className="relative bottom-[50px] max-w-[500px]"
               />
             </div>
           </div>

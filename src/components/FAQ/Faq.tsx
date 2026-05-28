@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const Faq = () => {
   return (
-    <div className="bg-[#E4C3A4]">
+    <body className="bg-[#E4C3A4]">
       <style>{`
         @keyframes fadeInDown {
           from { opacity: 0; transform: translateY(-30px); }
@@ -93,6 +93,6 @@ export const Faq = () => {
           </div>
         </div>
       </main>
-    </div>
+    </body>
   );
 };
