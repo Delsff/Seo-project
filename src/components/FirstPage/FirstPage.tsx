@@ -21,10 +21,9 @@ export const FirstPage = () => {
         .anim-buttons { animation: fadeInLeft  0.7s ease 0.4s both; }
         .anim-image   { animation: fadeInRight 0.7s ease 0.3s both; }
       `}</style>
-
-      <body className="bg-[#E4C3A4]">
+      <div className="bg-[#E4C3A4]">
         <header>
-          <nav className="anim-nav flex items-center w-[1300px] h-[157px] gap-[80px] justify-center relative right-[80px]">
+          <nav className="anim-nav flex items-center w-[1400px] h-[157px] gap-[80px] justify-center">
             <img src="/img/Frame.png" alt="logo" />
             <ul className="flex flex-wrap gap-[80px]">
               <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
@@ -45,7 +44,7 @@ export const FirstPage = () => {
             <OpenWindowButton />
           </nav>
           <ModalWindow />
-          <div className="flex flex-wrap gap-[150px] mt-[100px]">
+          <div className="flex flex-wrap gap-[150px] mt-[100px] justify-center">
             <div className="anim-text text-left flex flex-col gap-[30px]">
               <p className="text-[#D43D27] font-[Inter] font-[700] text-[Medium] text-[40px]">
                 sign up to unlock <br /> all features !
@@ -97,7 +96,7 @@ export const FirstPage = () => {
             </div>
           </div>
         </header>
-      </body>
+      </div>
     </>
   );
 };

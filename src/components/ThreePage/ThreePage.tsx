@@ -27,8 +27,7 @@ export const ThreePage = () => {
         .anim-vs       { animation: fadeIn      0.8s ease 0.4s both; }
         .anim-right    { animation: fadeInRight 0.7s ease 0.3s both; }
       `}</style>
-
-      <body className="bg-[#E4C3A4]">
+      <div className="bg-[#E4C3A4] min-h-screen w-full">
         <header>
           <nav className="anim-nav flex items-center w-[1300px] h-[157px] gap-[80px] justify-center relative right-[80px]">
             <img src="/img/Frame.png" alt="logo" />
@@ -98,7 +97,7 @@ export const ThreePage = () => {
             <span>-----</span>
           </div>
         </div>
-      </body>
+      </div>
     </>
   );
 };

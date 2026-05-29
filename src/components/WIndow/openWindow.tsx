@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useStoreWindow } from "../Store/store";
+import FormSign from "../validateForm/FormSign";
 export const OpenWindowButton = () => {
   const { openWindow } = useStoreWindow();
   return (
@@ -20,29 +21,16 @@ export const ModalWindow = () => {
     if (isModel) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "";
     }
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "";
     };
   }, [isModel]);
 
   if (!isModel) return null;
   return (
     <>
-      <style>
-        {`@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.animate-fadeIn {
-  animation: fadeIn 0.5s ease;
-}`}
-      </style>
       <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50 animate-fadeIn">
         <div className="w-[500px] h-[500px] bg-[#deb241] rounded-2xl shadow-2xl p-5 relative">
           <button
@@ -51,7 +39,7 @@ export const ModalWindow = () => {
           >
             ✕
           </button>
-          <h1 className="text-3xl font-bold mb-5">Sign Up</h1>
+          <FormSign />
         </div>
       </div>
     </>

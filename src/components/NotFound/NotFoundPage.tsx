@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const NotFoundPage = () => {
   return (
-    <body className="bg-[black] flex justify-center m-auto flex-col mt-[200px]">
+    <div className="bg-[black] flex justify-center m-auto flex-col mt-[200px] min-h-screen w-full">
       <h1 className="text-[50px] text-[white]">404</h1>
       <br />
       <p className="text-[40px] text-[white]">not found</p>
@@ -10,6 +10,6 @@ export const NotFoundPage = () => {
       <Link to={"/"} className="text-[white]">
         Home page
       </Link>
-    </body>
+    </div>
   );
 };
