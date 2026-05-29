@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { ModalWindow, OpenWindowButton } from "../WIndow/openWindow";
+import { ModalWindow, OpenWindowButton } from "../Window/openWindow";
+
 export const FirstPage = () => {
   return (
     <>
@@ -21,82 +22,80 @@ export const FirstPage = () => {
         .anim-buttons { animation: fadeInLeft  0.7s ease 0.4s both; }
         .anim-image   { animation: fadeInRight 0.7s ease 0.3s both; }
       `}</style>
-      <div className="bg-[#E4C3A4]">
-        <header>
-          <nav className="anim-nav flex items-center w-[1400px] h-[157px] gap-[80px] justify-center">
-            <img src="/img/Frame.png" alt="logo" />
-            <ul className="flex flex-wrap gap-[80px]">
-              <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
-                <Link to={"/"} className="visited:text-[#5a5858]">
-                  Home
+      <header className="bg-[#E4C3A4] w-full min-h-screen">
+        <nav className="anim-nav flex items-center h-[157px] justify-center mx-auto px-8">
+          <img src="/img/Frame.png" alt="logo" />
+          <ul className="flex flex-wrap gap-[80px]">
+            <li className="font-[Inter] font-[500] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
+              <Link to={"/"} className="visited:text-[#5a5858]">
+                Home
+              </Link>
+            </li>
+            <li className="font-[Inter] font-[500] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
+              <Link to={"/SecondPage"}>News</Link>
+            </li>
+            <li className="font-[Inter] font-[500] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
+              <Link to={"/ThreePage"}>clan wars analyse</Link>
+            </li>
+            <li className="font-[Inter] font-[500] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
+              <Link to={"/FourPage"}>frindes activity</Link>
+            </li>
+          </ul>
+          <OpenWindowButton />
+        </nav>
+        <ModalWindow />
+        <div className="flex flex-wrap gap-[150px] mt-[100px] justify-center px-6">
+          <div className="anim-text text-left flex flex-col gap-[30px]">
+            <p className="text-[#D43D27] font-[Inter] font-[700] text-[40px]">
+              sign up to unlock <br /> all features !
+            </p>
+            <p className="font-[Inter] font-[600] text-[26px]">
+              here you can see every thing <br /> about your <br /> clash of
+              clans account. like <br /> clan wars , frindes activity <br />
+              and every thing. but you need <br /> to sign up first.
+            </p>
+            <div className="anim-buttons flex flex-wrap gap-[20px]">
+              <button className="w-[147px] h-[60px] rounded-xl bg-[#E79F4A] font-[Inter] font-[500] text-[25px] cursor-pointer hover:bg-[#bd803a] p-0 overflow-hidden">
+                <Link
+                  to={"/Faq"}
+                  className="w-full h-full flex items-center justify-center gap-[5px]"
+                >
+                  FAQ
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
+                    />
+                  </svg>
                 </Link>
-              </li>
-              <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
-                <Link to={"/SecondPage"}>News</Link>
-              </li>
-              <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
-                <Link to={"/ThreePage"}>clan wars analyse</Link>
-              </li>
-              <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
-                <Link to={"/FourPage"}>frindes activity</Link>
-              </li>
-            </ul>
-            <OpenWindowButton />
-          </nav>
-          <ModalWindow />
-          <div className="flex flex-wrap gap-[150px] mt-[100px] justify-center">
-            <div className="anim-text text-left flex flex-col gap-[30px]">
-              <p className="text-[#D43D27] font-[Inter] font-[700] text-[Medium] text-[40px]">
-                sign up to unlock <br /> all features !
-              </p>
-              <p className="font-[Inter] font-[600] text-[Medium] text-[26px]">
-                here you can see every thing <br /> about your <br /> clash of
-                clans account. like <br /> clan wars , frindes activity <br />
-                and every thing. but you need <br /> to sign up first.
-              </p>
-              <div className="anim-buttons flex flex-wrap gap-[20px]">
-                <button className="w-[147px] h-[60px] rounded-xl bg-[#E79F4A] font-[Inter] font-[500] text-[25px] cursor-pointer hover:bg-[#bd803a] p-0 overflow-hidden">
-                  <Link
-                    to={"/Faq"}
-                    className="w-full h-full flex items-center justify-center gap-[5px]"
-                  >
-                    FAQ
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
-                      />
-                    </svg>
-                  </Link>
-                </button>
-                <button className="w-[147px] h-[60px] rounded-xl bg-[#E79F4A] font-[Inter] font-[500] text-[Medium] text-[20px] cursor-pointer hover:bg-[#bd803a]">
-                  <a
-                    href="https://supercell.com/en/games/clashroyale/"
-                    className="w-full h-full flex items-center justify-center"
-                  >
-                    get the app
-                  </a>
-                </button>
-              </div>
-            </div>
-            <div className="anim-image">
-              <img
-                src="/img/image.png"
-                alt="img"
-                className="relative bottom-[50px] max-w-[500px]"
-              />
+              </button>
+              <button className="w-[147px] h-[60px] rounded-xl bg-[#E79F4A] font-[Inter] font-[500] text-[20px] cursor-pointer hover:bg-[#bd803a]">
+                <a
+                  href="https://supercell.com/en/games/clashroyale/"
+                  className="w-full h-full flex items-center justify-center"
+                >
+                  get the app
+                </a>
+              </button>
             </div>
           </div>
-        </header>
-      </div>
+          <div className="anim-image">
+            <img
+              src="/img/image.png"
+              alt="img"
+              className="relative bottom-[50px] max-w-[500px]"
+            />
+          </div>
+        </div>
+      </header>
     </>
   );
 };

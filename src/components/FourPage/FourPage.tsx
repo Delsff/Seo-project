@@ -27,10 +27,9 @@ export const FourPage = () => {
         .anim-image  { animation: fadeInRight 0.7s ease 0.3s both; }
         .anim-notice { animation: fadeIn      0.7s ease 0.5s both; }
       `}</style>
-
       <div className="bg-[#E4C3A4] min-h-screen w-full">
         <header>
-          <nav className="anim-nav flex items-center w-[1300px] h-[157px] gap-[80px] justify-center relative right-[80px]">
+          <nav className="anim-nav flex items-center h-[157px] gap-[80px] justify-center px-8">
             <img src="/img/Frame.png" alt="logo" />
             <ul className="flex flex-wrap gap-[80px]">
               <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
