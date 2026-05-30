@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ModalWindow, OpenWindowButton } from "../Window/openWindow";
+import { ModalWindow, OpenWindowButton } from "../WIndow/openWindow";
 
 export const ThreePage = () => {
   return (
