@@ -41,7 +41,7 @@ export default function FormSign() {
   };
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="w-[450px] h-[450px]">
+      <form onSubmit={handleSubmit(onSubmit)} className="w-[450px]">
         <div>
           <h1 className="text-3xl font-bold flex justify-center">Sign Up</h1>
           <div>
@@ -53,13 +53,13 @@ export default function FormSign() {
                 id="name"
                 {...register("name")}
                 placeholder="Enter your User Name"
-                className="w-[350px] h-[50px] border-1 border-[black] rounded-full placeholder: pl-[30px] m-auto bg-[orange]"
+                className="w-[350px] h-[50px] border-1 border-[black] rounded-full pl-[30px] m-auto bg-[orange]"
               />
-              {errors.name && (
-                <p className="text-[red]">{errors.name.message}</p>
-              )}
+              <p className="text-[red] flex justify-center h-[20px] text-[14px]">
+                {errors.name?.message}
+              </p>
             </div>
-            <div className="flex flex-col gap-[10px] pt-[30px]">
+            <div className="flex flex-col gap-[10px] pt-[10px]">
               <h5 className="text-left text-[#c94519] text-[16px]">
                 Password:
               </h5>
@@ -67,11 +67,11 @@ export default function FormSign() {
                 id="password"
                 {...register("password")}
                 placeholder="Enter your password"
-                className="w-[350px] h-[50px] border-1 border-[black] rounded-full placeholder: pl-[30px] m-auto bg-[orange]"
+                className="w-[350px] h-[50px] border-1 border-[black] rounded-full pl-[30px] m-auto bg-[orange]"
               />
-              {errors.password && (
-                <p className="text-[red]">{errors.password.message}</p>
-              )}
+              <p className="text-[red] flex justify-center h-[20px] text-[14px]">
+                {errors.password?.message}
+              </p>
             </div>
             <div className="flex justify-between mt-[30px] w-[450px]">
               <label className="flex items-center gap-[15px]">
@@ -81,11 +81,11 @@ export default function FormSign() {
                 />
                 Remember me
               </label>
-              <a href="#" className="float-right">
+              <a href="#" className="float-right mr-[20px]">
                 Forgot password?
               </a>
             </div>
-            <div>
+            <div className="flex justify-center">
               <button
                 className="font-[Poppins] cursor-pointer text-[black] text-[19px] font-[500] w-[210px] h-[45px]
               rounded-full bg-[#de8818] hover:bg-[#a65f0d] mt-[30px]"

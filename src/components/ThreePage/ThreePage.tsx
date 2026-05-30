@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ModalWindow, OpenWindowButton } from "../Window/openWindow";
 
 export const ThreePage = () => {
   return (
@@ -17,8 +18,8 @@ export const ThreePage = () => {
           to   { opacity: 1; transform: translateX(0); }
         }
         @keyframes fadeIn {
-          from { opacity: 0; transform: scale(0.8); }
-          to   { opacity: 1; transform: scale(1); }
+          from { opacity: 0; }
+          to   { opacity: 1; }
         }
         .anim-nav      { animation: fadeInDown  0.6s ease 0.0s both; }
         .anim-left     { animation: fadeInLeft  0.7s ease 0.2s both; }
@@ -29,31 +30,30 @@ export const ThreePage = () => {
       `}</style>
       <div className="bg-[#E4C3A4] min-h-screen w-full">
         <header>
-          <nav className="anim-nav flex items-center h-[157px] gap-[80px] justify-center px-8">
+          <nav className="anim-nav flex flex-col md:flex-row items-center justify-center gap-4 md:gap-[80px] py-6 md:h-[157px] px-8">
             <img src="/img/Frame.png" alt="logo" />
-            <ul className="flex flex-wrap gap-[80px]">
-              <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
+            <ul className="flex flex-col md:flex-row items-center gap-3 md:gap-[80px]">
+              <li className="font-[Inter] font-[500] text-[22px] md:text-[26px] hover:text-[#4d4a4a] cursor-pointer whitespace-nowrap">
                 <Link to={"/"}>Home</Link>
               </li>
-              <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer ">
+              <li className="font-[Inter] font-[500] text-[22px] md:text-[26px] hover:text-[#4d4a4a] cursor-pointer whitespace-nowrap">
                 <Link to={"/SecondPage"}>News</Link>
               </li>
-              <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
+              <li className="font-[Inter] font-[500] text-[22px] md:text-[26px] hover:text-[#4d4a4a] cursor-pointer whitespace-nowrap">
                 <Link to={"/ThreePage"} className="visited:text-[#5a5858]">
                   clan wars analyse
                 </Link>
               </li>
-              <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer">
-                <Link to={"/FourPage"}>frindes activity </Link>
+              <li className="font-[Inter] font-[500] text-[22px] md:text-[26px] hover:text-[#4d4a4a] cursor-pointer whitespace-nowrap">
+                <Link to={"/FourPage"}>frindes activity</Link>
               </li>
             </ul>
-            <button className="w-[127px] h-[60px] rounded-xl bg-[#E79F4A] font-[Inter] font-[500] text-[Medium] text-[20px] cursor-pointer hover:bg-[#bd803a]">
-              sign up
-            </button>
+            <OpenWindowButton />
           </nav>
+          <ModalWindow />
         </header>
-        <div className="flex gap-30 flex justify-center mt-[50px]">
-          <div className="anim-left flex flex-col gap-2 text-[26px] font-medium">
+        <div className="flex flex-col md:flex-row justify-center items-center md:items-start mt-[40px] md:mt-[50px] px-4 pb-10 gap-6 md:gap-[50px]">
+          <div className="anim-left flex flex-col gap-3 text-[18px] md:text-[26px] font-medium">
             <span>clans name</span>
             <span>starts</span>
             <span>successed</span>
@@ -63,7 +63,7 @@ export const ThreePage = () => {
             <span>best attack</span>
             <span>worst attack</span>
           </div>
-          <div className="anim-divider flex flex-col items-center justify-between text-[26px] relative right-[50px]">
+          <div className="anim-divider hidden md:flex flex-col gap-3 text-[26px] text-[black]">
             <span>|</span>
             <span>|</span>
             <span>|</span>
@@ -73,7 +73,7 @@ export const ThreePage = () => {
             <span>|</span>
             <span>|</span>
           </div>
-          <div className="anim-left-val flex flex-col gap-2 text-[26px] font-medium relative right-[50px]">
+          <div className="anim-left-val flex flex-col gap-3 text-[18px] md:text-[26px] font-medium">
             <span>Team 7</span>
             <span>15</span>
             <span>5</span>
@@ -83,10 +83,10 @@ export const ThreePage = () => {
             <span>Hitman</span>
             <span>-----</span>
           </div>
-          <div className="anim-vs text-[85px] font-medium relative bottom-[30px]">
+          <div className="anim-vs text-[60px] md:text-[85px] font-medium flex items-center">
             VS
           </div>
-          <div className="anim-right flex flex-col gap-2 text-[26px] font-medium">
+          <div className="anim-right flex flex-col gap-3 text-[18px] md:text-[26px] font-medium">
             <span>best friends</span>
             <span>3</span>
             <span>3</span>
