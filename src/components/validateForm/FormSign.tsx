@@ -12,11 +12,11 @@ export const schem = yup
     name: yup
       .string()
       .required("This field is required")
-      .min(4, "the name must be of at least 2 letters"),
+      .min(4, "the name must be of at least 4 letters"),
     password: yup
       .string()
       .required("This field is required")
-      .min(8, "the password must be of at least 2 letters")
+      .min(8, "the password must be of at least 8 letters")
       .matches(
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
         {
@@ -35,60 +35,72 @@ export default function FormSign() {
     formState: { errors },
     reset,
   } = useForm({ resolver: yupResolver(schem) });
+
   const onSubmit: SubmitHandler<FormData> = (data: any) => {
     console.log(data);
     reset();
   };
+
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="w-[450px]">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="w-full max-w-[400px] mx-auto px-2"
+      >
         <div>
-          <h1 className="text-3xl font-bold flex justify-center">Sign Up</h1>
-          <div>
-            <div className="flex flex-col gap-[10px] pt-[30px]">
-              <h5 className="text-left text-[#c94519] text-[16px]">
+          <h1 className="text-2xl md:text-3xl font-bold flex justify-center text-[#454181]">
+            Sign Up
+          </h1>
+          <div className="w-full">
+            <div className="flex flex-col gap-[5px] pt-[20px]">
+              <h5 className="text-left text-[#c94519] text-[16px] font-[600]">
                 User Name:
               </h5>
               <input
                 id="name"
                 {...register("name")}
                 placeholder="Enter your User Name"
-                className="w-[350px] h-[50px] border-1 border-[black] rounded-full pl-[30px] m-auto bg-[orange]"
+                className="w-full h-[50px] border border-black rounded-full pl-[25px] bg-[orange] placeholder:text-[#5c5656] outline-none focus:border-2"
               />
-              <p className="text-[red] flex justify-center h-[20px] text-[14px]">
+              <p className="text-[red] text-center min-h-[20px] text-[13px] mt-1">
                 {errors.name?.message}
               </p>
             </div>
-            <div className="flex flex-col gap-[10px] pt-[10px]">
-              <h5 className="text-left text-[#c94519] text-[16px]">
+            <div className="flex flex-col gap-[5px] pt-[5px]">
+              <h5 className="text-left text-[#c94519] text-[16px] font-[600]">
                 Password:
               </h5>
               <input
                 id="password"
+                type="password"
                 {...register("password")}
                 placeholder="Enter your password"
-                className="w-[350px] h-[50px] border-1 border-[black] rounded-full pl-[30px] m-auto bg-[orange]"
+                className="w-full h-[50px] border border-black rounded-full pl-[25px] bg-[orange] placeholder:text-[#5c5656] outline-none focus:border-2"
               />
-              <p className="text-[red] flex justify-center h-[20px] text-[14px]">
+              <p className="text-[red] text-center min-h-[20px] text-[13px] mt-1 px-2 leading-tight">
                 {errors.password?.message}
               </p>
             </div>
-            <div className="flex justify-between mt-[30px] w-[450px]">
-              <label className="flex items-center gap-[15px]">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-3 mt-[15px] w-full text-[15px]">
+              <label className="flex items-center gap-[10px] cursor-pointer select-none">
                 <input
                   type="checkbox"
-                  className="w-[20px] h-[20px] cursor-pointer"
+                  className="w-[18px] h-[18px] cursor-pointer"
                 />
                 Remember me
               </label>
-              <a href="#" className="float-right mr-[20px]">
+              <a
+                href="#"
+                className="text-[#454181] hover:underline whitespace-nowrap"
+              >
                 Forgot password?
               </a>
             </div>
             <div className="flex justify-center">
               <button
-                className="font-[Poppins] cursor-pointer text-[black] text-[19px] font-[500] w-[210px] h-[45px]
-              rounded-full bg-[#de8818] hover:bg-[#a65f0d] mt-[30px]"
+                type="submit"
+                className="font-[Poppins] cursor-pointer text-black text-[18px] font-[500] w-[200px] h-[45px]
+                rounded-full bg-[#de8818] hover:bg-[#a65f0d] mt-[25px] transition-colors"
               >
                 Login
               </button>
