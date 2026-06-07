@@ -26,25 +26,25 @@ export const FourPage = () => {
         .anim-name   { animation: fadeInLeft  0.6s ease 0.3s both; }
         .anim-stats  { animation: fadeInLeft  0.6s ease 0.4s both; }
         .anim-image  { animation: fadeInRight 0.7s ease 0.3s both; }
-        .anim-notice { animation: fadeIn      0.7s ease 0.5s both; }
+        .anim-notice { animation: fadeIn       0.7s ease 0.5s both; }
       `}</style>
-      <div className="bg-[#E4C3A4] min-h-screen w-full">
+      <div className="bg-[#E4C3A4] min-h-screen w-full overflow-x-hidden">
         <header>
           <nav className="anim-nav flex flex-col md:flex-row items-center justify-center gap-4 md:gap-[80px] py-6 md:h-[157px] px-8">
             <img src="/img/Frame.png" alt="logo" />
             <ul className="flex flex-col md:flex-row items-center gap-3 md:gap-[80px]">
-              <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer whitespace-nowrap">
+              <li className="font-[Inter] font-[500] text-[18px] md:text-[26px] hover:text-[#4d4a4a] cursor-pointer whitespace-nowrap">
                 <Link to={"/"}>Home</Link>
               </li>
-              <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer whitespace-nowrap">
+              <li className="font-[Inter] font-[500] text-[18px] md:text-[26px] hover:text-[#4d4a4a] cursor-pointer whitespace-nowrap">
                 <Link to={"/SecondPage"}>News</Link>
               </li>
-              <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer whitespace-nowrap">
+              <li className="font-[Inter] font-[500] text-[18px] md:text-[26px] hover:text-[#4d4a4a] cursor-pointer whitespace-nowrap">
                 <Link to={"/ThreePage"}>clan wars analyse</Link>
               </li>
-              <li className="font-[Inter] font-[500] text-[Medium] text-[26px] hover:text-[#4d4a4a] cursor-pointer whitespace-nowrap">
+              <li className="font-[Inter] font-[500] text-[18px] md:text-[26px] hover:text-[#4d4a4a] cursor-pointer whitespace-nowrap">
                 <Link to={"/FourPage"} className="visited:text-[#5a5858]">
-                  frindes activity
+                  friends activity
                 </Link>
               </li>
             </ul>
@@ -53,7 +53,7 @@ export const FourPage = () => {
           <ModalWindow />
         </header>
         <main className="flex flex-col items-center px-6 pb-10">
-          <h1 className="anim-title font-[inter] font-[800] font-extrabold text-[50px] mt-[30px]">
+          <h1 className="anim-title font-[inter] font-[800] text-[36px] md:text-[50px] mt-[30px] text-center">
             <span
               className="font-black bg-clip-text text-transparent inline-block"
               style={{
@@ -74,27 +74,27 @@ export const FourPage = () => {
             </span>
           </h1>
           <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-[30px] md:gap-[60px] mt-[40px] w-full max-w-[1100px]">
-            <div className="anim-name flex flex-col gap-[10px]">
-              <span className="font-[inter] font-[800] text-[32px] text-[#C9260B] mt-[20px]">
+            <div className="anim-name flex flex-col gap-[10px] text-center md:text-left">
+              <span className="font-[inter] font-[800] text-[24px] md:text-[32px] text-[#C9260B] mt-[20px]">
                 dark Phonix
               </span>
-              <span className="font-[inter] font-[800] text-[32px] text-[#C9260B] mt-[25px]">
+              <span className="font-[inter] font-[800] text-[24px] md:text-[32px] text-[#C9260B] md:mt-[25px]">
                 Dark Man
               </span>
             </div>
-            <div className="anim-stats flex gap-[40px] md:gap-[80px]">
-              <div className="font-[inter] font-[800] text-[28px] flex flex-col gap-[8px]">
+            <div className="anim-stats flex gap-[20px] sm:gap-[40px] md:gap-[80px] text-center md:text-left overflow-x-auto max-w-full py-2">
+              <div className="font-[inter] font-[800] text-[18px] md:text-[28px] flex flex-col gap-[8px]">
                 <span>attacks</span>
                 <span>6</span>
                 <span>2</span>
               </div>
-              <div className="font-[inter] font-[800] text-[28px] flex flex-col gap-[8px]">
+              <div className="font-[inter] font-[800] text-[18px] md:text-[28px] flex flex-col gap-[8px]">
                 <span>stars</span>
                 <span>18</span>
                 <span>6</span>
               </div>
-              <div className="font-[inter] font-[800] text-[28px] flex flex-col gap-[8px]">
-                <span className="whitespace-nowrap">last time onlining</span>
+              <div className="font-[inter] font-[800] text-[18px] md:text-[28px] flex flex-col gap-[8px]">
+                <span className="whitespace-nowrap">last online</span>
                 <span>21:53</span>
                 <span>22:10</span>
               </div>
@@ -102,16 +102,16 @@ export const FourPage = () => {
             <img
               src="/img/image4.png"
               alt="img"
-              className="anim-image w-[250px] md:w-[300px] md:h-[500px] object-contain"
+              className="anim-image w-full max-w-[250px] md:max-w-[300px] md:h-[500px] object-contain"
             />
           </div>
-          <div className="anim-notice flex flex-col md:flex-row items-center md:items-start gap-[10px] md:gap-[40px] w-full max-w-[1100px]">
-            <p className="font-[inter] font-[800] text-[38px] text-[#C9260B] whitespace-nowrap">
+          <div className="anim-notice flex flex-col md:flex-row items-center md:items-start gap-[10px] md:gap-[40px] w-full max-w-[1100px] mt-10">
+            <p className="font-[inter] font-[800] text-[28px] md:text-[38px] text-[#C9260B] whitespace-nowrap">
               notice :
             </p>
-            <p className="font-[inter] font-[400] text-[28px] md:text-[35px] text-center md:text-left">
-              if you add a friend after 5 minuts <br /> your friend will add to
-              website
+            <p className="font-[inter] font-[400] text-[20px] md:text-[35px] text-center md:text-left">
+              if you add a friend, after 5 minutes <br /> your friend will be
+              added to the website
             </p>
           </div>
         </main>

@@ -22,7 +22,7 @@ export const FirstPage = () => {
         .anim-buttons { animation: fadeInLeft  0.7s ease 0.4s both; }
         .anim-image   { animation: fadeInRight 0.7s ease 0.3s both; }
       `}</style>
-      <header className="bg-[#E4C3A4] w-full min-h-[800px]">
+      <header className="bg-[#E4C3A4] w-full min-h-[800px] overflow-x-hidden">
         <div className="w-full max-w-[1250px] m-auto px-4">
           <nav className="anim-nav flex flex-col md:flex-row items-center justify-center mx-auto gap-4 md:gap-[40px] py-6 md:h-[157px]">
             <img src="/img/Frame.png" alt="logo" className="md:mr-[20px]" />
@@ -39,7 +39,7 @@ export const FirstPage = () => {
                 <Link to={"/ThreePage"}>clan wars analyse</Link>
               </li>
               <li className="font-[Inter] font-[500] text-[22px] md:text-[26px] hover:text-[#4d4a4a] cursor-pointer whitespace-nowrap">
-                <Link to={"/FourPage"}>frindes activity</Link>
+                <Link to={"/FourPage"}>friends activity</Link>
               </li>
             </ul>
             <OpenWindowButton />
@@ -52,9 +52,9 @@ export const FirstPage = () => {
               sign up to unlock <br /> all features !
             </p>
             <p className="font-[Inter] font-[600] text-[18px] md:text-[26px]">
-              here you can see every thing <br /> about your <br /> clash of
-              clans account. like <br /> clan wars , frindes activity <br />
-              and every thing. but you need <br /> to sign up first.
+              here you can see everything <br /> about your <br /> clash of
+              clans account. like <br /> clan wars , friends activity <br />
+              and everything. but you need <br /> to sign up first.
             </p>
             <div className="anim-buttons flex flex-wrap justify-center md:justify-start gap-[20px]">
               <button className="w-[130px] md:w-[147px] h-[50px] md:h-[60px] rounded-xl bg-[#E79F4A] font-[Inter] font-[500] text-[20px] md:text-[25px] cursor-pointer hover:bg-[#bd803a] p-0 overflow-hidden">
@@ -89,11 +89,11 @@ export const FirstPage = () => {
               </button>
             </div>
           </div>
-          <div className="anim-image">
+          <div className="anim-image w-full max-w-[400px] md:max-w-[500px]">
             <img
               src="/img/image.png"
               alt="img"
-              className="md:relative md:bottom-[50px] w-[400px] md:max-w-[500px]"
+              className="md:relative md:bottom-[50px] w-full h-auto"
             />
           </div>
         </div>
