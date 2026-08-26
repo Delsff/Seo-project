@@ -22,7 +22,6 @@ FAQ — answers to the most common questions
 
 ⚡ Fast and lightweight — built as a single-page application
 
-
 🛠️ Tech Stack
 
 React — component-based UI
@@ -32,6 +31,5 @@ Tailwind CSS — utility-first styling
 Netlify — hosting and deployment
 
 <img width="1893" height="887" alt="image" src="https://github.com/user-attachments/assets/b0a7d459-5933-4312-baaa-95c6ab03ec56" />
-
 
 [View online](https://clashroyal77.netlify.app/)
